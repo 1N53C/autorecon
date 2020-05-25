@@ -42,4 +42,4 @@ echo -e "[+] Staring gobuster directory bruteforce..."
 gobuster dir -u http://${h} -w ${w} -o gobuster -t 50
 
 # Final Output
-echo -e "[+] Output files have been saved in folder ${d}"
+echo -e "[+] Output files have been saved in folder "${d}
