@@ -37,9 +37,17 @@ cd ${d}
 echo -e "[+] Starting nmap scan..."
 nmap -sV -sV -o nmap ${i}
 
-# Do a gobuster directory bruteforce and save the output to a file called 'gobuster'"
-echo -e "[+] Staring gobuster directory bruteforce..."
-gobuster dir -u http://${i} -w ${w} -o gobuster -t 50
+if grep '80\|443' nmap;
+then
+	# Do a gobuster directory bruteforce and save the output to a file called 'gobuster'"
+	echo -e "[+] Found open http(s) port(s)..."
+	echo -e "[+] Staring gobuster directory bruteforce..."
+	gobuster dir -u http://${i} -w ${w} -o gobuster -t 50
+else
+	echo -e "[-] No open standard http(s) ports found."
+	echo -e "[+] nmap output has been saved to "${d}
+	exit
+fi
 
 # Final Output
 echo -e "[+] Output files have been saved in folder "${d}
