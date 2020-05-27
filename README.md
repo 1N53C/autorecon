@@ -1,6 +1,8 @@
 # autorecon
 Automates some enumeration 
 
+![autorecon screenshot](https://raw.githubusercontent.com/1N53C/autorecon/master/autorecon.png)
+
 ## Install and Usage
 
 ### Install
