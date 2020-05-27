@@ -41,7 +41,7 @@ if grep '80\|443' nmap;
 then
 	# Do a gobuster directory bruteforce and save the output to a file called 'gobuster'"
 	echo -e "[+] Found open http(s) port(s)..."
-	echo -e "[+] Staring gobuster directory bruteforce..."
+	echo -e "[+] Starting gobuster directory bruteforce..."
 	gobuster dir -u http://${i} -w ${w} -o gobuster -t 50
 else
 	echo -e "[-] No open standard http(s) ports found."
