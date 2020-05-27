@@ -5,6 +5,11 @@ Automates some enumeration
 
 ## Install and Usage
 
+## Prerequistes
+
+1. nmap (https://nmap.org)
+2. gobuster - amazing CLI based directory brute force tool, which I personally back (https://github.com/OJ/gobuster)
+
 ### Install
 
 ```bash
