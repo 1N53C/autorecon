@@ -35,7 +35,7 @@ cd ${d}
 
 # Do a -sV -sC nmap scan and save the output to a file called 'nmap'"
 echo -e "[+] Starting nmap scan..."
-nmap -sV -sV -o nmap ${i}
+nmap -sV -sC -o nmap ${i}
 
 if grep '80\|443' nmap;
 then
